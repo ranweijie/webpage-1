@@ -1,0 +1,447 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "icomoon";
+
+$bg-color:#efefef;
+$text-color:#3f3f3f;
+$big-text-color:#3c3d46;
+$second-text-color:#d9dada;
+$hightlight-text-color:white;
+$button-color:#6cdcac;
+$border-color:#b5b3b1;
+
+body {
+    font-family: "Open Sans",sans-serif;
+	font-size: 62.5%;
+	text-align: center;
+}
+
+.hero {
+  background: url("/images/telstra.png");
+  background-size: cover;
+  color: $hightlight-text-color;
+  width: 100em;
+  height: 30em;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 1em 1em 0 0;
+  header {
+    padding-top: 2em;
+    img {
+      width: 8em;
+      height: 2em;
+      float: left;
+    }
+    ul {
+      float: right;
+      li {
+        float: left;
+        margin: 0 .5em;
+        padding: 1em;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        &:last-child{
+          border: 1px solid $hightlight-text-color;
+        }
+      }
+    }
+    @include clearfix;
+  }
+  h1{
+    font-size: 3em;
+    padding: 1em 0 .5em 0;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 2em;
+    color: $second-text-color;
+  }
+  form{
+    padding: 2em 0 3em;
+    input[type="text"]{
+      padding: 1em;
+      margin: 0;
+      border: 0;
+      width: 18em;
+      border-radius: 2px 0 0 2px;
+      background: $bg-color;
+      opacity: .3;
+    }
+    input[type="button"]{
+      padding: 1em;
+      margin: 0;
+      width: 6em;
+      color: white;
+      //padding: 1em 0 1em 1em;
+      border: 0;
+      border-radius: 0 2px 2px 0;
+      text-transform: uppercase;
+      background-color: $button-color;
+    }
+  }
+}
+
+.numbers{
+  width: 100em;
+  margin: 0 auto;
+  background-color: $bg-color;
+  ul{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    top: -5em;
+    background: $bg-color;
+    li.number{
+      width: 25%;
+      float: left;
+      box-sizing: border-box;
+      border: 1px solid $second-text-color;
+      h2{
+        font-size: 2em;
+        padding: 1em 0;
+        color: $big-text-color;
+      }
+      h3{
+        padding-bottom: 2em;
+        color: $text-color;
+      }
+    }
+    @include clearfix;
+  }
+}
+
+.how-it-works{
+  width: 100em;
+  margin: 0 auto;
+  padding-bottom: 5em;
+  border-bottom: .2em solid $border-color;
+  background-color: $bg-color;
+
+  h2{
+    width: 10em;
+    padding:1em 0;
+    margin: 0 auto;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: $big-text-color;
+
+    &:after{
+      display: block;
+      content: "";
+      background-color: $border-color;
+      width: 7em;
+      height: .1em;
+      margin: .3em auto;
+    }
+    &:hover:after{
+      background-color: #eca961;
+    }
+  }
+  ul{
+    @include clearfix
+  }
+  li{
+    width: 33.3%;
+    float: left;
+    position: relative;
+    text-align: center;
+
+    &:before{
+      display: block;
+      content: "";
+      height: .2em;
+      width:100%;
+      position: absolute;
+      left:50%;
+      top: 5.6em;
+      margin: 0 1.7em;
+      background-color: $border-color;
+    }
+    &:last-child:before{
+      display: none;
+    }
+    .detail{
+      .number{
+        width: 1em;
+        height:1em;
+        display: block;
+        padding: .3em;
+        margin: 2em auto 3em;
+        font-size: 2em;
+        color: $border-color;
+        border:1px solid $border-color;
+        background-color: $bg-color;
+        @include border-radius(100%);
+      }
+      i{
+        font-size: 3.6em;
+      }
+      .icon-list:before{
+        font-family:"icomoon";
+        content: '\e9bb';
+        color: #eca961;
+      }
+      .icon-pencil:before{
+        font-family:"icomoon";
+        content: '\e905';
+        color: #ad9ede;
+      }
+      .icon-user:before{
+        font-family:"icomoon";
+        content: "\e972";
+        color: #539ac8;
+      }
+      h3{
+        padding: 1.5em 0 0 0;
+        font-size:1.5em;
+        font-weight:bold;
+        color: $big-text-color;
+      }
+      p{
+        padding: 1rem;
+        line-height: 1.5;
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.why-choose-us {
+  width: 100em;
+  margin: 0 auto;
+  padding: 5em 0;
+  border-bottom: .2em solid $border-color;
+  background-color: $bg-color;
+
+  h2 {
+    width: 10em;
+    padding: 1em 0;
+    margin: 0 auto;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: $big-text-color;
+  }
+  ul{
+    li{
+      width: 50%;
+      box-sizing: border-box;
+      padding:2em;
+      //border: 1px solid red;
+      float:left;
+      i{
+        font-size:2em;
+        display: block;
+        float: left;
+      }
+      .icon-checkmark:before{
+        font-family:"icomoon";
+        content: '\ea10';
+        color: #6ebe96;
+      }
+      .icon-price-tag:before{
+        font-family:"icomoon";
+        content: '\e935';
+        color: #1eb5e8;
+      }
+      .icon-loop2:before{
+        font-family:"icomoon";
+        content: '\ea2e';
+        color: #eca961;
+      }
+      .icon-user:before{
+        font-family:"icomoon";
+        content: '\e971';
+        color: #ae7dc3;
+      }
+      .icon-file-text:before{
+        font-family:"icomoon";
+        content: '\e922';
+        color: #f17082;
+      }
+      .icon-point-up:before{
+        font-family:"icomoon";
+        content: '\ea03';
+        color: #eb805f;
+      }
+      .why-item{
+        width: 80%;
+        float: left;
+        padding-left: 2em;
+        h3{
+          font-size:1.5em;
+          font-weight: bold;
+          text-align: left;
+          text-transform: capitalize;
+          color: $big-text-color;
+        }
+        p{
+          padding-top: 1em;
+          text-align: left;
+          line-height: 1.5;
+          color: $text-color;
+        }
+      }
+    }
+    @include clearfix;
+  }
+}
+
+.comment{
+  width: 100em;
+  margin: 0 auto;
+  padding: 5em 0;
+  background-color: $bg-color;
+  .btn-group{
+    span{
+      display: inline-block;
+      height: 3em;
+      line-height: 3em;
+      width: 12em;
+      text-transform: capitalize;
+      font-size:1.5em;
+      border: 1px solid transparent;
+    }
+    span:first-child{
+      border-radius: 3px 0 0 3px;
+      background-color: #60687b;
+      color: $hightlight-text-color;
+    }
+    span:nth-child(2){
+      border: 1px solid #60687b;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+  h3{
+    width:80%;
+    margin: 0 auto;
+    padding: 2em 0;
+    font-size:1.5em;
+    line-height: 1.5;
+    font-weight:600;
+    color: $big-text-color;
+  }
+  .photos{
+    width: 50%;
+    margin: 0 auto;
+    @include clearfix;
+    .photo-item{
+      width: 33%;
+      float: left;
+      text-transform: capitalize;
+
+      &:before{
+        display: block;
+        content: '';
+        width: 30%;
+        height: .2em;
+        margin: 0 auto;
+        background-color: $border-color;
+      }
+      h3{
+        padding: 1em;
+      }
+      p{
+        height: 2em;
+        line-height: 2em;
+        text-transform: uppercase;
+        color: $text-color;
+      }
+      .img{
+        width: 80%;
+        margin: 2em auto;
+        padding: 1em;
+        border:1px solid $border-color;
+        @include border-radius(100%);
+        img{
+          width: 100%;
+          height: 14em;
+          @include border-radius(100%);
+        }
+      }
+    }
+  }
+}
+
+.bottom-form{
+  width: 100em;
+  padding: 5em 0;
+  margin: 0 auto;
+  background: url("../images/telstra-green.png");
+  background-size: cover;
+  color: $hightlight-text-color;
+  form{
+    //height: 3em;
+    //line-height: 3em;
+    span{
+      font-size: 2em;
+      display: inline-block;
+      margin-right: .5em;
+    }
+    input[type="text"]{
+      padding: 1em;
+      margin: 0;
+      border: 0;
+      width: 35em;
+      border-radius: 2px 0 0 2px;
+      background: $bg-color;
+      //opacity: .3;
+    }
+    input[type="button"] {
+      padding: 1em;
+      margin: 0;
+      width: 6em;
+      color: white;
+      //padding: 1em 0 1em 1em;
+      border: 0;
+      border-radius: 0 2px 2px 0;
+      text-transform: uppercase;
+      background-color: $button-color;
+    }
+  }
+}
+
+.foot{
+  width: 100em;
+  margin:0 auto;
+  background-color: $bg-color;
+  border: 0;
+  border-radius: 0 0 1em 1em;
+  footer{
+    padding: 4em 10em;
+    @include clearfix;
+  }
+  ul.foot-item{
+    //width:70%;
+    float: left;
+    font-size: 1.5em;
+    li{
+      color: $text-color;
+      float: left;
+      width: 6em;
+      cursor: pointer;
+    }
+  }
+  ul.foot-share{
+    float: right;
+    li{
+      float: left;
+      width: 4em;
+      cursor: pointer;
+      i{
+        font-size:2em;
+      }
+
+      .icon-twitter:before{
+        font-family:"icomoon";
+        content: '\ea96';
+        color: #6ebe96;
+      }
+      .icon-facebook:before{
+        font-family:"icomoon";
+        content: '\ea90';
+        color: #1eb5e8;
+      }
+    }
+  }
+}
